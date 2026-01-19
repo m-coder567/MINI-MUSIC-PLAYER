@@ -1,20 +1,37 @@
 # Day #75
 
-### Mini Music Player
-We will work on building a mini music player from scratch! In this beginner-friendly video, we'll walk you through the step-by-step process of creating a fully functional music player using HTML, CSS, and JavaScript.
+## 🎵 Mini Music Player
 
-Here's what you'll learn:
+In this project, we build a **Mini Music Player** from scratch.
+This beginner-friendly project demonstrates how to create a fully functional music player using **HTML, CSS, and JavaScript**.
 
-🔹 Setting up the basic structure of our HTML file to accommodate the music player.
-🔹 Styling our music player with CSS to make it visually appealing and user-friendly.
-🔹 Implementing JavaScript functionality to handle play, pause, next and previous.
-🔹 Enhancing user experience with additional features like track progress control.
+### 🚀 What you’ll learn:
 
-# Screenshot
-Here we have project screenshot :
+* Setting up the basic HTML structure for a music player
+* Styling the player using CSS for a clean and user-friendly UI
+* Implementing JavaScript functionality for:
 
-#yolo bage test:
-YOLO badge test 🚀
+  * Play
+  * Pause
+  * Next & Previous track
+* Enhancing user experience with track progress control
+
+---
+
+## 📸 Screenshot
+
+Here is a preview of the project:
 
 
 ![screenshot-1](screenshot.jpg)
+
+
+---
+
+## 🟡 YOLO Badge Test
+
+YOLO badge test 🚀
+
+
+
+
