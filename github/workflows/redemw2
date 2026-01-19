@@ -1,0 +1,8 @@
+# Save the workflow file
+mkdir -p .github/workflows
+# Paste the yolo-check.yml content into .github/workflows/yolo-check.yml
+# Overwrite README.md with the README content above
+
+git add .github/workflows/yolo-check.yml README.md
+git commit -m "chore(docs/ci): add YOLO workflow and workflow-status badge"
+git push origin main
