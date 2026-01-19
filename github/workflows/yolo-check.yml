@@ -1,0 +1,43 @@
+name: YOLO Check
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'    # daily
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  yolo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count merged PRs by user
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_USER: m-coder567
+          MIN_MERGED: 3
+        run: |
+          repo="${{ github.repository }}"
+          # Query GitHub Search API for merged PRs authored by TARGET_USER in this repo
+          json=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/search/issues?q=repo:${repo}+type:pr+author:${TARGET_USER}+is:merged")
+          merged_count=$(python3 - <<'PY'
+import sys, json
+j=json.load(sys.stdin)
+print(j.get("total_count",0))
+PY
+<<<"$json")
+          echo "Merged PRs by ${TARGET_USER}: $merged_count"
+          if [ "$merged_count" -ge "$MIN_MERGED" ]; then
+            echo "YOLO achieved"
+            exit 0
+          else
+            echo "YOLO not achieved"
+            exit 1
+          fi
