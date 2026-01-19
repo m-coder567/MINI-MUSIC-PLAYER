@@ -30,9 +30,6 @@ Here is a preview of the project:
 
 ## 🟡 YOLO Badge Test
 
-YOLO badge test 🚀
-stay on masterpice coder
+[![YOLO workflow](https://github.com/m-coder567/MINI-MUSIC-PLAYER/actions/workflows/yolo-check.yml/badge.svg)](https://github.com/m-coder567/MINI-MUSIC-PLAYER/actions/workflows/yolo-check.yml)
 
-
-
-
+This badge turns green when you have at least 3 merged PRs authored by m-coder567.
